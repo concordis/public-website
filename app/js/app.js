@@ -33,9 +33,15 @@ $(function() {
 		$('body').animate({ scrollTop: scrollTarget }, 300);
 	});
 
-	$('.btn-contact a').on('click', function(e) {
+	// $('.btn-contact a').on('click', function(e) {
+	// 	e.preventDefault();
+	// 	var scrollTarget = $('footer').offset().top - navHeightOffset;
+	// 	$('body').animate({ scrollTop: scrollTarget }, 300);
+	// });
+
+	$('.btn-services a').on('click', function(e) {
 		e.preventDefault();
-		var scrollTarget = $('footer').offset().top - navHeightOffset;
+		var scrollTarget = $('.detail-service-offering h1').offset().top - navHeightOffset;
 		$('body').animate({ scrollTop: scrollTarget }, 300);
 	});
 
