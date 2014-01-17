@@ -1,4 +1,4 @@
-public-website
+Public-Website
 ==============
 
 The Concordis public website.
