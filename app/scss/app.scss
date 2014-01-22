@@ -210,6 +210,7 @@ section.detail-virtuous-cycle {
 		}
 	}
 	p {
+		font-size: rem-calc(18);
 		color: transparentize(#000, 0.5);
 	}
 	blockquote {
@@ -217,16 +218,25 @@ section.detail-virtuous-cycle {
 		padding-left: rem-calc(21);
 		border: none;
 		p {
-			font-size: rem-calc(21);
+			// font-size: rem-calc(21);
 			&:before {
 				margin-left: rem-calc(-27);
 				content: "\201C \00A0";
 				color: transparentize(#000, 0.8);
-				font-size: rem-calc(45);
+				font-size: rem-calc(36);
 				line-height: 1rem;
+			}
+			&:after {
+				content: "\201D";
+				color: transparentize(#000, 0.8);
+				font-size: rem-calc(36);
+				line-height: 0;
+				position: relative;
+				top: 0.75rem;
 			}
 		}
 		cite {
+			text-indent: -0.35rem;
 			color: transparentize(#000, 0.5);
 			padding-top: rem-calc(19);
 			b {
