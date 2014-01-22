@@ -102,7 +102,17 @@ footer {
 }
 
 .hero {
+	overflow: hidden;
 	min-height: rem-calc(72);
+  h1 {
+  	font-size: 340%;
+  	margin-top: rem-calc(54);
+  	margin-bottom: 3rem;
+  	line-height: 1;
+		color: rgb(255,255,255);
+  	text-shadow: 0 rem-calc(2) 0 rgba(0,0,0,0.2);
+		letter-spacing: -0.01em;
+  }
 	.row {
 		position: relative;
 		img.bkg {
@@ -111,29 +121,28 @@ footer {
 			right: -50px;
 			width: 30%;
 		}
-	  h1 {
-	  	font-size: 340%;
-	  	margin-top: rem-calc(54);
-	  	margin-bottom: 3rem;
-	  	line-height: 1;
-			color: rgb(255,255,255);
-	  	text-shadow: 0 rem-calc(2) 0 rgba(0,0,0,0.2);
-			letter-spacing: -0.01em;
-	  }
 	}
 }
 
 section {
-	overflow: hidden;
 	&:not(.hero) {
 		padding: 50px 0 60px 0;
 	}
 }
 
 section.overview {
-	padding-top: 100px;
-	padding-bottom: 100px;
-  background-color: #fff;
+  background-color: #efeeed;
+  background-image: url(/images/graph-paper.png);
+  // background-size: cover;
+  // border-bottom: rem-calc(45) solid $body-font-color;
+  h2.subheader {
+  	// margin-bottom: rem-calc(48);
+  	line-height: 1;
+  	font-size: rem-calc(24);
+  }
+  a {
+  	white-space: nowrap;
+  }
 }
 
 section.detail-recruiting-process {
@@ -142,6 +151,9 @@ section.detail-recruiting-process {
   	margin-bottom: rem-calc(48);
   	line-height: 1;
   	font-size: rem-calc(24);
+  }
+  h3 {
+  	line-height: 1;
   }
 }
 
@@ -315,11 +327,9 @@ footer {
 	}
 	.hero {
 		h1 {
-	  	font-size: 40%;
-	  	margin-top: rem-calc(36);
-	  	margin-bottom: 3rem;
-	  	// text-shadow: 0 rem-calc(2) 0 rgba(0,0,0,0.2);
-			// letter-spacing: -0.01em;
+	  	font-size: 170%;
+	  	margin-top: 1rem;
+	  	margin-bottom: 2rem;
 		}
 	}
 }
