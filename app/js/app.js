@@ -21,9 +21,21 @@ $(function() {
 		});
 	});
 
-	$('.btn-model-shared-success a').on('click', function(e) {
+	$('.link-to-recruiting-process').on('click', function(e) {
+		e.preventDefault();
+		var scrollTarget = $('.detail-recruiting-process h1').first().offset().top - navHeightOffset;
+		$('body').animate({ scrollTop: scrollTarget }, 300);
+	});
+
+	$('.link-to-model-shared-success').on('click', function(e) {
 		e.preventDefault();
 		var scrollTarget = $('.detail-shared-success h1').first().offset().top - navHeightOffset;
+		$('body').animate({ scrollTop: scrollTarget }, 300);
+	});
+
+	$('.link-to-virtuous-cycle').on('click', function(e) {
+		e.preventDefault();
+		var scrollTarget = $('.detail-virtuous-cycle h1').first().offset().top - navHeightOffset;
 		$('body').animate({ scrollTop: scrollTarget }, 300);
 	});
 
