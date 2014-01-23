@@ -17,12 +17,8 @@ $icon-logo: '\e600';
 $icon-twitter: '\e601';
 $icon-facebook: '\e602';
 $icon-linkedin: '\e603';
-// $icon-twitter: '\e604';
-// $icon-facebook: '\e605';
-// $icon-linkedin: '\e606';
 $icon-email: '\e607';
 $icon-phone: '\e608';
-$icon-bang: '\e609';
 $icon-thumbs-up: '\e60a';
 $icon-checkmark: '\e60b';
 $icon-warning: '\e60c';
@@ -131,12 +127,8 @@ section {
 }
 
 section.overview {
-  background-color: #efeeed;
-  background-image: url(/images/graph-paper.png);
-  // background-size: cover;
-  // border-bottom: rem-calc(45) solid $body-font-color;
+  background: #fff url(/images/graph-paper.png) repeat center center;
   h2.subheader {
-  	// margin-bottom: rem-calc(48);
   	line-height: 1;
   	font-size: rem-calc(24);
   }
@@ -299,12 +291,42 @@ section.break-magicians-code {
 }
 
 section.detail-service-offering {
-	background-color: #efeeed;
+	padding: 0;
+	background: #fff url(/images/graph-paper.png) repeat center center;
+	> .row {
+		position: relative;
+		top: -20px;
+		margin-bottom: -20px;
+		overflow: hidden;
+	}
+	.panel-services {
+		margin-bottom: 20px;
+		padding: 1.25rem 2rem 30px 2rem;
+		background-color: #f7e989;
+		text-align: center;
+		border-radius: 20px;
+		&:before {
+			content: url(/images/girl-tan-left.svg);
+			position: absolute;
+			bottom: -170px;
+			left: -60px;
+		}
+	}
 	h1 {
 		margin-bottom: rem-calc(36);
 	}
-	small {
-		display: block;
+	li {
+		padding: 0.5rem 0 0.75rem 0;
+		border-top: 1px dashed transparentize($body-font-color, 0.8);
+		i {
+			white-space: nowrap;
+			color: transparentize($body-font-color, 0.4);
+		}
+	}
+	p {
+		position: relative;
+		margin: 0 0 5px 0;
+		line-height: 0.8rem;
 	}
 }
 
@@ -342,6 +364,20 @@ footer {
 	  	margin-bottom: 2rem;
 		}
 	}
+	section.overview img {
+		margin: 0.5rem 0;
+	}
+	section.detail-service-offering {
+		.panel-services {
+			&:before {
+				left: -40px;
+			}
+			li {
+				text-align: right;
+			}
+		}
+	}
+
 }
 
 
