@@ -70,26 +70,23 @@
 <!-- build:js scripts/vendor/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/jqueryui/ui/jquery.ui.effect.js"></script>
 <script src="bower_components/foundation/js/foundation.min.js"></script>
-<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
-
 <script src="js/app.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
 <script type="text/javascript" src="//use.typekit.net/tzw7vhw.js"></script>
-<script type="text/javascript">/*try{Typekit.load();}catch(e){}*/</script>
-<script type="text/javascript">
-try {
-  Typekit.load({
-    // loading: function() { $('.hero h2').hide(); },
-    active: function() { $('.hero h2').fadeIn(); }
-  })
-} catch(e) {}
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47457896-1', 'concordis.net');
+  ga('send', 'pageview');
 </script>
 
 </body>
 </html>
-
-
-
