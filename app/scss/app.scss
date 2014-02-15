@@ -34,11 +34,7 @@ $icon-arrow-right: '\e60d';
   -webkit-font-smoothing: antialiased;
 }
 
-.contain-to-grid { box-shadow: 0 0 2px rgba(0,0,0,0.1); }
-
-nav a { text-shadow: 0 rem-calc(1) 0 rgba(0,0,0,0.2); }
-
-li.name h1 { text-align: left; color: #fff; text-shadow: 0 rem-calc(1) 0 rgba(0,0,0,0.2); }
+li.name h1 { text-align: left; color: #fff; }
 
 .icon-phone,
 .icon-email,
@@ -49,37 +45,41 @@ li.social a {
 }
 .icon-phone:before { margin-right: 4px; content: $icon-phone; }
 .icon-email:before { margin-right: 4px; content: $icon-email; }
-li.name h1:before { margin-left: 10px; font-size: rem-calc(27); line-height: 45px; content: $icon-logo; }
+li.name h1:before { margin-left: 10px; font-size: rem-calc(21); line-height: 45px; content: $icon-logo; }
 li.linkedin a:before { content: $icon-linkedin; }
 li.twitter a:before { content: $icon-twitter; }
 li.facebook a:before { content: $icon-facebook; }
 
-.contain-to-grid .top-bar { margin-bottom: 0; }
+.contain-to-grid .top-bar { margin-bottom: 0; padding-left: 10px; padding-right: 10px; }
 
 .top-bar-section ul li {
 	border-right: 1px solid rgba(255,255,255,0.2);
+	&:not(.has-form) a:not(.button) { padding-left: 9px; padding-right: 9px; }
 	&:first-child { border-left: 1px solid rgba(255,255,255,0.2); }
 	&.social {
 		border: none;
-		&.facebook { padding-left: 10px; }
-		a { opacity: 0.8; padding: 0 10px; font-size: rem-calc(21); }
+		&.facebook { padding-left: 5px; }
+		a { opacity: 0.8; font-size: rem-calc(21); }
 	}
 }
 
-.top-bar.expanded .top-bar-section {
-	a { text-align: center; }
-	ul {
-		border-top: 1px solid rgba(255,255,255,0.2);
-		li {
-			border-bottom: 1px solid rgba(255,255,255,0.2);
-			&.social {
-				border: none;
-				float: left;
-				width: 33%;
-				a { font-size: rem-calc(27); line-height: 45px; }
+.top-bar.expanded {
+	padding-left: 0; padding-right: 0;
+	.top-bar-section {
+		a { text-align: center; }
+		ul {
+			border-top: 1px solid rgba(255,255,255,0.2);
+			li {
+				border-bottom: 1px solid rgba(255,255,255,0.2);
+				&.social {
+					border: none;
+					float: left;
+					width: 33%;
+					a { font-size: rem-calc(27); line-height: 45px; }
+				}
+				&.facebook a { text-align: right; }
+				&.linkedin a { text-align: left; }
 			}
-			&.facebook a { text-align: right; }
-			&.linkedin a { text-align: left; }
 		}
 	}
 }
@@ -106,7 +106,6 @@ footer {
   	margin-bottom: 3rem;
   	line-height: 1;
 		color: rgb(255,255,255);
-  	text-shadow: 0 rem-calc(2) 0 rgba(0,0,0,0.2);
 		letter-spacing: -0.01em;
   }
 	.row {
@@ -126,7 +125,7 @@ section {
 	}
 }
 
-section.overview {
+section.detail-concordis-way {
   background: #fff url(/images/graph-paper.png) repeat center center;
   h2.subheader {
   	line-height: 1;
@@ -245,7 +244,7 @@ section.detail-open-positions {
 	display: none;
 }
 
-section.break-magicians-code {
+section.detail-industry-secrets {
 	background-color: #fff;
 	h2 {
 		padding-top: 1.5em;
@@ -372,7 +371,7 @@ footer {
 	  	margin-bottom: 2rem;
 		}
 	}
-	section.overview img {
+	section.detail-concordis-way img {
 		margin: 0.5rem 0;
 	}
 	section.detail-service-offering {

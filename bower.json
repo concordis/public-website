@@ -2,7 +2,7 @@
   "name": "concordis",
   "version": "0.0.0",
   "dependencies": {
-    "foundation": ">=5.0.2"
+    "foundation": "=5.0.3"
   },
   "devDependencies": {}
 }
