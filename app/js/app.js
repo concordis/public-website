@@ -21,6 +21,17 @@ $(function() {
 		});
 	});
 
+	// All these .link-to- functions should be rewritten to a single vriable function.
+	$('.link-to-concordis-way').on('click', function(e) {
+		e.preventDefault();
+		var scrollTarget = $('.detail-concordis-way h1').first().offset().top - navHeightOffset;
+		$('body').animate({ scrollTop: scrollTarget }, 300, function() {
+			$('body').animate({ scrollTop: scrollTarget - 50 }, 100, function() {
+				$('body').animate({ scrollTop: scrollTarget }, 300, 'easeInBack');
+			});
+		});
+	});
+
 	$('.link-to-recruiting-process').on('click', function(e) {
 		e.preventDefault();
 		var scrollTarget = $('.detail-recruiting-process h1').first().offset().top - navHeightOffset;
@@ -44,6 +55,16 @@ $(function() {
 	$('.link-to-virtuous-cycle').on('click', function(e) {
 		e.preventDefault();
 		var scrollTarget = $('.detail-virtuous-cycle h1').first().offset().top - navHeightOffset;
+		$('body').animate({ scrollTop: scrollTarget }, 300, function() {
+			$('body').animate({ scrollTop: scrollTarget - 50 }, 100, function() {
+				$('body').animate({ scrollTop: scrollTarget }, 300, 'easeInBack');
+			});
+		});
+	});
+
+	$('.link-to-industry-secrets').on('click', function(e) {
+		e.preventDefault();
+		var scrollTarget = $('.detail-industry-secrets h1').first().offset().top - navHeightOffset;
 		$('body').animate({ scrollTop: scrollTarget }, 300, function() {
 			$('body').animate({ scrollTop: scrollTarget - 50 }, 100, function() {
 				$('body').animate({ scrollTop: scrollTarget }, 300, 'easeInBack');
