@@ -98,25 +98,27 @@ footer {
 }
 
 .hero {
-	overflow: hidden;
+	// overflow: hidden;
 	min-height: rem-calc(72);
   h1 {
-  	font-size: 340%;
-  	margin-top: rem-calc(54);
-  	margin-bottom: 3rem;
-  	line-height: 1;
+  	// font-size: 340%;
+  	// margin-top: rem-calc(54);
+  	// margin-bottom: 3rem;
+  	margin-top: rem-calc(12);
+  	margin-bottom: rem-calc(27);
+  	line-height: 1.03;
 		color: rgb(255,255,255);
 		letter-spacing: -0.01em;
   }
-	.row {
-		position: relative;
-		img.bkg {
-			position: absolute;
-			bottom: -(rem-calc(162));
-			right: -50px;
-			width: 30%;
-		}
-	}
+	// .row {
+	// 	position: relative;
+	// 	img.bkg {
+	// 		position: absolute;
+	// 		bottom: -(rem-calc(162));
+	// 		right: -50px;
+	// 		width: 30%;
+	// 	}
+	// }
 }
 
 section {
@@ -390,15 +392,15 @@ footer {
 
 
 @media #{$small-only} {
-	h1,
-	.hero {
-		text-align: center;
-	}
+	// h1,
+	// .hero {
+	// 	text-align: center;
+	// }
 	.hero {
 		h1 {
 	  	font-size: 170%;
-	  	margin-top: 1rem;
-	  	margin-bottom: 2rem;
+	  	// margin-top: 1rem;
+	  	// margin-bottom: 2rem;
 		}
 	}
 	section.detail-concordis-way {
