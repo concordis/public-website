@@ -178,6 +178,23 @@ section.detail-recruiting-process {
   }
 }
 
+section.detail-about-us {
+	background-color: #fff;
+	img {
+		margin-top: rem-calc(-56);
+		border-radius: 50%;
+		border: rem-calc(18) solid $success-color;
+	}
+  h2.subheader {
+  	margin-bottom: rem-calc(48);
+  	line-height: 1;
+  	font-size: rem-calc(24);
+  }
+  h3 {
+  	line-height: 1;
+  }
+}
+
 section.detail-shared-success {
 	background-color: #efeeed;
 	h1 + p {
@@ -424,6 +441,14 @@ footer {
 			  	height: 30%;
 			  }
 			}
+		}
+	}
+	section.detail-about-us {
+		img {
+			margin-top: 0;
+		}
+		h3 {
+			margin-bottom: rem-calc(36);
 		}
 	}
 	section.detail-service-offering {

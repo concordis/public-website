@@ -23,15 +23,15 @@ $(function() {
 	});
 
 	// All these .link-to- functions should be rewritten to a single variable function.
-	$('.link-to-concordis-way').on('click', function(e) {
-		e.preventDefault();
-		var scrollTarget = $('.detail-concordis-way h1').first().offset().top - navHeightOffset;
-		$(bodyOrHTML).animate({ scrollTop: scrollTarget }, 300, function() {
-			$(bodyOrHTML).animate({ scrollTop: scrollTarget - 50 }, 100, function() {
-				$(bodyOrHTML).animate({ scrollTop: scrollTarget }, 300, 'easeInBack');
-			});
-		});
-	});
+	// $('.link-to-concordis-way').on('click', function(e) {
+	// 	e.preventDefault();
+	// 	var scrollTarget = $('.detail-concordis-way h1').first().offset().top - navHeightOffset;
+	// 	$(bodyOrHTML).animate({ scrollTop: scrollTarget }, 300, function() {
+	// 		$(bodyOrHTML).animate({ scrollTop: scrollTarget - 50 }, 100, function() {
+	// 			$(bodyOrHTML).animate({ scrollTop: scrollTarget }, 300, 'easeInBack');
+	// 		});
+	// 	});
+	// });
 
 	$('.link-to-recruiting-process').on('click', function(e) {
 		e.preventDefault();
