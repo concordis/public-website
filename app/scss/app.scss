@@ -50,6 +50,11 @@ li.linkedin a:before { content: $icon-linkedin; }
 li.twitter a:before { content: $icon-twitter; }
 li.facebook a:before { content: $icon-facebook; }
 
+p.lead {
+	line-height: rem-calc(45);
+	margin-bottom: rem-calc(54);
+}
+
 .contain-to-grid .top-bar { margin-bottom: 0; padding-left: 10px; padding-right: 10px; }
 
 .top-bar-section ul li {
@@ -192,6 +197,14 @@ section.detail-about-us {
   }
   h3 {
   	line-height: 1;
+  }
+  hr + .row {
+  	min-height: rem-calc(300);
+  }
+  .pathwise {
+  	img {
+  		border-color: #fafafa;
+  	}
   }
 }
 
