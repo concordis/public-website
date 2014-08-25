@@ -383,6 +383,54 @@ section#detail-about-us {
   }
 }
 
+section#detail-hr-assessment-lead {
+	overflow: hidden;
+  background: #fff url(/images/graph-paper.png) repeat center center;
+  h2.subheader {
+  	margin-bottom: rem-calc(48);
+  	line-height: 1;
+  	font-size: rem-calc(24);
+  }
+  p.lead {
+  	margin-bottom: 0;
+  }
+	// > div:first-child::before {
+	// 	content: url(/images/guy-tan-right.svg);
+	// 	position: absolute;
+	// 	bottom: -170px;
+	// 	right: -60px;
+	// }
+}
+
+section#detail-hr-assessment {
+	background-color: #fff;
+  h3 {
+  	line-height: 1;
+		+ ul {
+				margin-top: rem-calc(24);
+				margin-left: 0;
+			li {
+				list-style: none;
+				p {
+					padding-left: rem-calc(36);
+					line-height: 1.2;
+				}
+				&:before {
+					float: left;
+					font-size: rem-calc(24);
+					@extend %icon;
+					position: relative;
+					// top: rem-calc(5);
+					color: $success-color;
+					content: $icon-arrow-right;
+				}
+			}
+		}
+
+
+  }
+}
+
 footer {
 	padding: rem-calc(36) 0;
 	color: transparentize(#000, 0.4);
@@ -409,8 +457,6 @@ footer {
 	#hero {
 		h1 {
 	  	font-size: 170%;
-	  	// margin-top: 1rem;
-	  	// margin-bottom: 2rem;
 		}
 	}
 	section#detail-concordis-way {
