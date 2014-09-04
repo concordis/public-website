@@ -402,6 +402,16 @@ section#detail-hr-assessment-lead {
 	// }
 }
 
+section#detail-contact-form {
+	background-color: #fff;
+}
+
+.map {
+	padding: 2px;
+	border: 1px solid transparentize(#000, 0.9);
+	background-color: #f6f6f6;
+}
+
 section#detail-hr-assessment {
 	background-color: #fff;
   h3 {
@@ -442,14 +452,6 @@ footer {
 		border-bottom: 1px solid transparentize(#000, 0.8);
 	}
 }
-
-.map {
-	padding: 2px;
-	border: 1px solid transparentize(#000, 0.9);
-	background-color: #f6f6f6;
-}
-
-
 
 
 
