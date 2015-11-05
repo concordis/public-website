@@ -14,18 +14,20 @@ module.exports = function (grunt) {
         watch: {
             compass: {
                 files: ['<%= yeoman.app %>/scss/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server', 'autoprefixer']
+                // tasks: ['compass:server', 'autoprefixer']
+                tasks: ['compass:server']
             },
             styles: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-                tasks: ['newer:copy:styles', 'autoprefixer']
+                // tasks: ['newer:copy:styles', 'autoprefixer']
+                tasks: ['newer:copy:styles']
             },
             livereload: {
                 options: {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
-                    '<%= yeoman.app %>/*.html',
+                    '<%= yeoman.app %>/{,*/}*.html',
                     '.tmp/styles/{,*/}*.css',
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
@@ -124,19 +126,19 @@ module.exports = function (grunt) {
                 }
             }
         },
-        autoprefixer: {
-            options: {
-                browsers: ['last 1 version']
-            },
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '.tmp/styles/',
-                    src: '{,*/}*.css',
-                    dest: '.tmp/styles/'
-                }]
-            }
-        },
+        // autoprefixer: {
+        //     options: {
+        //         browsers: ['last 1 version']
+        //     },
+        //     dist: {
+        //         files: [{
+        //             expand: true,
+        //             cwd: '.tmp/styles/',
+        //             src: '{,*/}*.css',
+        //             dest: '.tmp/styles/'
+        //         }]
+        //     }
+        // },
         'bower-install': {
             app: {
                 html: '<%= yeoman.app %>/index.html',
@@ -150,7 +152,8 @@ module.exports = function (grunt) {
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
                         '<%= yeoman.dist %>/images/{,*/}*.{gif,jpeg,jpg,png,webp}',
-                        // '<%= yeoman.dist %>/styles/fonts/{,*/}*.*'
+                        // '<%= yeoman.dist %>/styles/fonts/{,*/}*.*',
+                        '!<%= yeoman.dist %>/styles/wufoo.css'
                     ]
                 }
             }
@@ -191,6 +194,15 @@ module.exports = function (grunt) {
             }
         },
         cssmin: {
+            minify: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/styles',
+                    src: ['*.css'],
+                    dest: '<%= yeoman.dist %>/styles',
+                    ext: '.css'
+                }]
+            }
         },
         dalek: {
             options: {
@@ -223,12 +235,11 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.dist %>',
                     src: [
-                        'contact/**/*', // Added to ensure contact/ subdirs are included.
+                        '{,*/}*.html',
                         '*.{ico,png,txt}',
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
-                        'styles/fonts/{,*/}*.*',
-                        'bower_components/sass-bootstrap/fonts/*.*'
+                        'styles/fonts/{,*/}*.*'
                     ]
                 }]
             },
@@ -238,7 +249,6 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
-                // src: '/**/*.css'
             }
         },
         modernizr: {
@@ -277,7 +287,7 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'concurrent:server',
-            'autoprefixer',
+            // 'autoprefixer',
             'connect:livereload',
             'watch'
         ]);
@@ -291,7 +301,7 @@ module.exports = function (grunt) {
     grunt.registerTask('test', [
         'clean:server',
         'concurrent:test',
-        'autoprefixer',
+        // 'autoprefixer',
         'connect:test',
         'mocha'
     ]);
@@ -300,7 +310,7 @@ module.exports = function (grunt) {
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',
-        'autoprefixer',
+        // 'autoprefixer',
         'concat',
         'cssmin',
         'uglify',
