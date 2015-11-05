@@ -71,47 +71,60 @@
   </nav>
 </div>
 
-<section id="detail-contact-form">
+<section id="rate-calc-detail">
   <div class="row">
     <div class="small-12 columns text-center">
-      <h1>Let’s Get to Know Each Other</h1>
-      <h2 class="subheader">…and why it’s time for this refreshing approach.</h2>
+      <h1>Pay Rate Calculator</h1>
+      <h2 class="subheader">Wanna see the real numbers?</h2>
     </div>
   </div>
   <div class="row">
-    <div class="small-12 columns">
-      <hr />
-      <div class="row">
-        <div class="small-12 medium-6 small-centered columns">
-          <a href="https://maps.google.com/maps?q=1500+Westlake+Ave+N+Seattle+WA&z=14" target="_blank"><img class="map" src="/images/map.png" /></a>
-          <p><a href="https://maps.google.com/maps?q=1500+Westlake+Ave+N+Seattle+WA&z=14" target="_blank">Click for map</a></p>
+    <div class="small-12 medium-6 large-4 large-offset-1 columns">
+
+      <div id="rate-calc">
+        <ul id="contract-source-switch" class="stack button-group">
+          <li><a href="#" id="c-found" class="button small round">Concordis found my contract</a></li>
+          <li><a href="#" id="i-found" class="button small round secondary">I found my own contract</a></li>
+        </ul>
+        <div id="c1">
+          <p id="c1-bill-rate">Hourly bill rate <input min="0" step="0.01" placeholder="E.g. 55.25" type="number" /></p>
+          <div id="breakdown-container" class="faded">
+            <p id="c1-concordis-rate" class="c-source">Concordis 25% <span>0.00</span></p>
+            <p id="c1-consultant-cost">Consultant <span>0.00</span></p>
+            <p class="c-source"><b>Taxes</b></p>
+            <p class="c-source" style="margin-left:0.5em;"><b>Federal</b></p>
+            <p class="c-source" id="c1-fica">FICA 6.2% <span>0.00</span></p>
+            <p class="c-source" id="c1-medi">MEDI 1.45% <span>0.00</span></p>
+            <p class="c-source" style="margin-left:0.5em;"><b>WA State</b></p>
+            <p class="c-source" id="c1-wa-rate-er">WA Rate/ER .02% <span>0.00</span></p>
+            <p class="c-source" id="c1-sdi-wa-er">SDI: WA/ER .24% <span>0.00</span></p>
+            <p class="c-source" id="c1-suta-wa-er">SUTA: WA/ER 3.36% <span>0.00</span></p>
+            <p class="c-source" id="c1-total-employment-taxes"><b>Total taxes</b> <span>0.00</span></p>
+            <p id="c1-insurance-benefits">Insurance $545/mo. <span>0.00</span></p>
+            <p class="c-source" id="c1-pay-rate">Pay rate <span>0.00</span> <em class="c-source">first year of contract</em></p>
+            <i class="c-source">Starting on day 366 of contract, 80% of <span class="nw">bill rate</span> is passed through.</i>
+            <div class="arrow-down c-source"></div>
+            <p id="c1-pay-rate-2">Pay rate <span>0.00</span> <em class="c-source">starting day 366 of contract</em></p>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="small-12 medium-6 small-centered columns">
-          <h3>Send us a message.</h3>
-          <hr />
 
-<div id="wufoo-s92enu41pii4xd"></div>
-<script type="text/javascript">var s92enu41pii4xd;(function(d, t) {
-var s = d.createElement(t), options = {
-'userName':'concordisjobs',
-'formHash':'s92enu41pii4xd',
-'autoResize':true,
-'height':'478',
-'async':true,
-'host':'wufoo.com',
-'header':'hide',
-'ssl':false};
-s.src = '//www.wufoo.com/scripts/embed/form.js';
-s.onload = s.onreadystatechange = function() {
-var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-try { s92enu41pii4xd = new WufooForm();s92enu41pii4xd.initialize(options);s92enu41pii4xd.display(); } catch (e) {}};
-var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-})(document, 'script');</script>
-
-        </div>
-      </div>
+    </div>
+    <div class="small-12 medium-6 large-5 end columns text-center">
+      <p class="lead" style="margin-top:3rem;">We only thrive when you thrive. A few perks our consultants enjoy are <b>revenue sharing</b>, fully <b>disclosed bill rates</b>, comprehensive <b>benefits</b>, and <b>ongoing 360° feedback</b> via <a href="http://www.workwithable.com/" target="_blank">Workwithable</a>. We also offer <b>referral bonuses</b> and never resort to <span class="nw">non-competes</span>.</p>
+      <dl>
+        <dt>Plus:</dt>
+        <dd>
+          <ul>
+            <li>401k matching:<br /> 100% match on first 3%<br /> 50% match on next 2%</li>
+            <li>100% medical, dental,<br /> vision, and life insurance</li>
+            <li>six paid holidays</li>
+            <li>PTO</li>
+            <li>Concordis-sponsored professional<br /> growth opportunities</li>
+          </ul>
+        </dd>
+      </dl>
+      <p><a href="/contact/" class="button small round">Contact Concordis</a></p>
     </div>
   </div>
 </section>
@@ -143,12 +156,12 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
 <!-- endbuild -->
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-47457896-1', 'concordis.net');
-  ga('send', 'pageview');
+// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+// ga('create', 'UA-47457896-1', 'concordis.net');
+// ga('send', 'pageview');
 </script>
 
 </body>
