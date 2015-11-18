@@ -35,6 +35,67 @@ $(function() {
 
 
 
+  //
+  // Check for video element and set it up
+  //
+  var vids,
+    HeroVideo = {
+
+    settings: {
+      isVideo: Modernizr.video.h264,
+      $detailVideoContainer: $("#detail-video"),
+      $heroVideoContainer: $("#hero-video-container"),
+      $playVideoCTAContainer: $("#play-video-cta"),
+      $playVideoCTAButtonContainer: $("#play-me"),
+      $heroVideo: $("#hero-video"),
+    },
+
+    init: function() {
+      vids = this.settings;
+      if(vids.isVideo) {
+        this.buildPlayCTA();
+        this.doEndVideo();
+      }
+    },
+
+    bindPlayCTAActions: function() {
+      vids.$playVideoCTAButtonContainer.find("a").on("click", function(e) {
+        e.preventDefault();
+        vids.$heroVideo[0].load();
+        vids.$playVideoCTAContainer.fadeOut("slow", function() {
+          vids.$heroVideo.fadeIn("slow", function() {
+            vids.$heroVideo[0].play();
+          });
+        });
+      });
+    },
+
+    buildPlayCTA: function() {
+      $("<a></a>", {
+          "class": "button round",
+          html: "Play Video"
+        }).appendTo(vids.$playVideoCTAButtonContainer);
+      vids.$playVideoCTAButtonContainer.fadeIn();
+      this.bindPlayCTAActions();
+    },
+
+    doEndVideo: function() {
+      vids.$heroVideo.bind("timeupdate", function() {
+        if(vids.$heroVideo[0].currentTime >= 106) {
+          vids.$heroVideo.fadeOut("slow", function() {
+            vids.$playVideoCTAContainer.fadeIn("slow");
+          });
+        }
+      })
+    },
+
+  }
+
+
+
+  //
+  // Set up the rate calculator
+  //
   var s,
     RateCalc = {
 
@@ -138,8 +199,15 @@ $(function() {
 
   }
 
+
+  //
+  // Do the stuff
+  //
   if($("#rate-calc")) {
     RateCalc.init();
+  }
+  if($("#detail-video")) {
+    HeroVideo.init();
   }
 
 });
