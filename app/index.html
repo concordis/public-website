@@ -12,6 +12,7 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   <!-- build:css(.tmp) /styles/app.css -->
+  <!-- <link rel="stylesheet" href="/bower_components/video.js/dist/video-js.min.css" /> -->
   <link rel="stylesheet" href="/styles/app.css" />
   <!-- endbuild -->
 
@@ -76,44 +77,21 @@
   </nav>
 </div>
 
-<section id="detail-concordis-way" class="clearfix">
-  <div class="row">
-    <div class="small-12 columns">
-      <h1 class="text-center">The Concordis Way</h1>
-      <h2 class="subheader text-center">We believe growing a business should benefit all stakeholders.</h2>
-      <p>
-        <a href="#detail-recruiting-process" class="link-to recruiting-process">Our Recruiting Process</a>
-        <a href="#detail-shared-success" class="link-to shared-success">Our Model of Shared Success</a>
-        <a href="#detail-virtuous-cycle" class="link-to virtuous-cycle">A Virtuous Cycle</a>
-      </p>
-      <img data-interchange="[/images/the-concordis-way-vertical.svg, (default)], [/images/the-concordis-way.svg, (medium)]" />
-    </div>
-  </div>
-</section>
-
-<section id="detail-recruiting-process">
-  <div class="row">
-    <div class="small-12 columns text-center">
-      <h1>Our Recruiting Process</h1>
-      <h2 class="subheader">The result of 30 years of experience.</h2>
+<section id="detail-video">
+  <div id="hero-video-container">
+    <div id="play-video-cta">
       <div class="row">
-        <div class="medium-4 small-12 columns">
-          <img src="/images/face-to-face.svg" />
-          <h3>Face-to-Face<br /> Meeting</h3>
-          <p>To better know every customer and every candidate, we meet face to face. Circumstances preventing, we video chat.</p>
-        </div>
-        <div class="medium-4 small-12 columns">
-          <img src="/images/hard-skills.svg" />
-          <h3>Hard-Skills<br /> Testing</h3>
-          <p>To help ensure successful technical placement, each candidate is scored and verified by way of industry-standard hard-skills testing.</p>
-        </div>
-        <div class="medium-4 small-12 columns">
-          <img src="/images/soft-skills.svg" />
-          <h3>Soft-Skills<br /> Assessment</h3>
-          <p>As the first company comprised entirely of <i><a href="http://pathwisemanagement.com/" target="_blank">Pathwise Leadership</a>–trained</i> professionals, Concordis gains the most meaningful soft-skills assessment.</p>
+        <div class="small-12 medium-10 large-8 small-centered text-center columns">
+          <h1>No Awkward Secrets</h1>
+          <h2 class="subheader">Consultants and employers know exactly what’s going on.</h2>
+          <p><img src="/images/soft-skills.svg" /></p>
+          <p id="play-me" class="clearfix hide"></p>
         </div>
       </div>
     </div>
+    <video id="hero-video" width="100%" controls>
+      <source src="/images/concordis-video.mp4" type="video/mp4">
+    </video>
   </div>
 </section>
 
@@ -356,6 +334,7 @@
 <!-- bower:js -->
 <script src="/bower_components/jquery/dist/jquery.js"></script>
 <script src="/bower_components/foundation/js/foundation.min.js"></script>
+<!-- <script src="/bower_components/video.js/dist/video.min.js"></script> -->
 <script src="/js/app.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
