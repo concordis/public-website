@@ -126,77 +126,22 @@ section {
 section#detail-video {
   padding: 0;
   background-color: #fff;
-  h1 {
-    margin-top: rem-calc(36)
-  }
-  h2.subheader {
-    margin-bottom: rem-calc(36);
-    line-height: 1;
-    font-size: rem-calc(24);
-  }
-  #hero-video-container {
-    // position: relative;
-    #play-video-cta {
-      // position: absolute;
-      width: 100%;
-      // min-height: 100%;
-      background-color: #fff;
-      z-index: 10;
-      .row {
-        clear: both;
-        #play-me {
-        }
-      }
+  #play-video-cta {
+    background: #fff url(/images/graph-paper.png) repeat center center;
+    h1 {
+      margin-top: rem-calc(36)
     }
-    video {
-      display: none;
-      margin: 0;
-      width: 100%;
-      height: auto !important;
+    h2.subheader {
+      margin-bottom: rem-calc(36);
+      line-height: 1;
+      font-size: rem-calc(24);
     }
   }
-}
-
-section#detail-shared-success {
-  background-color: #efeeed;
-  h1 + p {
-    font-size: rem-calc(21);
-  }
-  h2.subheader {
-    margin-bottom: rem-calc(48);
-    line-height: 1;
-    font-size: rem-calc(24);
-  }
-  .btn-dig-in {
-    display: none; text-align: center;
-  }
-  .dig-in-shared-success {
-    padding: 2em 10px;
-    background-color: #fff;
-    border: 1px solid transparentize($body-font-color, 0.8);
-    p:first-child {
-      padding-top: 1em;
-      border-top: 10px solid $success-color;
-    }
-    h3:before {
-      @extend %icon;
-      margin-right: rem-calc(1);
-      font-size: rem-calc(36);
-      color: $success-color;
-      content: $icon-thumbs-up;
-    }
-    ul {
-      margin-left: 1em;
-      list-style: none;
-      li:before {
-        @extend %icon;
-        position: relative;
-        margin-left: -1em;
-        top: 2px;
-        opacity: 0.3;
-        content: $icon-arrow-right;
-      }
-    }
+  video {
+    display: none;
+    margin: 0;
+    width: 100%;
+    height: auto !important;
   }
 }
 
@@ -580,7 +525,6 @@ section#rate-calc-detail {
         &::-webkit-inner-spin-button,
         &::-webkit-outer-spin-button {
           -webkit-appearance: none;
-          // margin: 0;
         }
         &::-webkit-input-placeholder {
           color: $body-font-color;
