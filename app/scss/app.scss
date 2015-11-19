@@ -148,7 +148,7 @@ section#detail-video {
 section#detail-virtuous-cycle {
   h1 {
     color: transparentize(#000, 0.4);
-    + p {
+    + p.lead {
       margin-bottom: rem-calc(39);
       padding-bottom: rem-calc(36);
       border-bottom: 1px solid transparentize(#000, 0.8);
@@ -185,12 +185,27 @@ section#detail-virtuous-cycle {
     cite {
       text-indent: -0.35rem;
       color: transparentize(#000, 0.5);
-      padding-top: rem-calc(19);
+      margin-bottom: rem-calc(9);
+      padding-top: 0;
       b {
         display: block;
       }
+      a {
+        margin-left: 0.25em;
+        color: #fff;
+        color: rgba(255,255,255,0.6);
+        &:after {
+          content: "\00A0 \21B1";
+        }
+      }
       &:before {
-        content: none;
+        display: block;
+        content: "";
+        width: 40%;
+        border-top: 1px solid transparentize(#000, 0.8);
+      }
+      &:first-of-type {
+        margin-top: rem-calc(54);
       }
     }
   }
