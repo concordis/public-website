@@ -73,13 +73,14 @@ p.lead {
 }
 
 .top-bar.expanded {
-  padding-left: 0; padding-right: 0;
   .top-bar-section {
     a { text-align: center; }
     ul {
       border-top: 1px solid rgba(255,255,255,0.2);
       li {
+        border-right: none;
         border-bottom: 1px solid rgba(255,255,255,0.2);
+        &:first-child { border-left: none; }
         &.social {
           border: none;
           float: left;
@@ -573,6 +574,23 @@ footer {
   }
 }
 
+//
+// This is just a though. onclick, scroll to top and open menu.
+//
+#scroll-top-nav-trigger {
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: rem-calc(9);
+  bottom: rem-calc(9);
+  width: rem-calc(54);
+  height: rem-calc(54);
+  font-size: rem-calc(27);
+  line-height: rem-calc(54);
+  text-align: center;
+  box-shadow: 0 0 2px 2px transparentize(#000, 0.8);
+}
 
 
 @media #{$small-only} {
@@ -606,3 +624,28 @@ footer {
   }
 
 }
+
+//
+// This is actually pretty close to fixing the landscape menu issue.
+//
+@media (orientation: landscape) {
+  @media #{$retina}, #{$small-only} {
+    .f-topbar-fixed {
+      padding-top: 0 !important;
+    }
+    .fixed {
+      position: static !important;
+    }
+    .fixed.expanded:not(.top-bar) .title-area {
+      position: static !important;
+    }
+    .fixed.expanded:not(.top-bar) .top-bar-section {
+      margin-top: 0 !important;
+    }
+    #scroll-top-nav-trigger {
+      // display: block;
+    }
+  }
+}
+
+
