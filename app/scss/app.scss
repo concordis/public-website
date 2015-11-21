@@ -212,26 +212,40 @@ section#detail-virtuous-cycle {
   }
 }
 
+section#detail-careercast {
+  background-color: #fff;
+  background-image: url(/images/sound-bkg.png);
+  background-repeat: repeat-x;
+  background-position: 50% 90%;
+  h2 {
+    margin-top: 0;
+    margin-bottom: rem-calc(48);
+    padding-top: 0;
+    text-align: center;
+    line-height: 1;
+    font-size: rem-calc(24);
+  }
+  .iframe-container {
+    padding: 10px;
+    background-color: rgba(255,255,255,0.8);
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: $global-radius;
+  }
+}
+
 section#detail-industry-secrets {
   background-color: #fff;
   h2 {
-    padding-top: 1.5em;
-    margin-top: 2em;
-    margin-bottom: rem-calc(36);
+    margin-top: 0;
+    margin-bottom: rem-calc(48);
+    padding-top: 0;
     text-align: center;
-    border-top: 1px solid transparentize($body-font-color, 0.8);
-    &.subheader {
-      margin-top: 0;
-      padding-top: 0;
-      line-height: 1em;
-      border: none;
-      margin-bottom: rem-calc(48);
-      line-height: 1;
-      font-size: rem-calc(24);
-    }
+    line-height: 1;
+    font-size: rem-calc(24);
   }
   ul.industry-secrets {
     list-style: none;
+    margin-left: 0;
     li {
       margin-top: 1em;
       margin-bottom: 2.5em;
