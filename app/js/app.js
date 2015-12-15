@@ -27,33 +27,23 @@ $(function() {
   // Check for video element and set it up
   //
   var vids,
-    HeroVideo = {
+    playYTVideoCTA = {
 
     settings: {
-      isVideo: Modernizr.video.h264,
-      $detailVideoContainer: $("#detail-video"),
-      $heroVideoContainer: $("#hero-video-container"),
-      $playVideoCTAContainer: $("#play-video-cta"),
       $playVideoCTAButtonContainer: $("#play-me"),
-      $heroVideo: $("#hero-video"),
+      $heroVideoModal: $("#hero-video-modal"),
     },
 
     init: function() {
       vids = this.settings;
-      if(vids.isVideo) {
-        this.buildPlayCTA();
-        this.doEndVideo();
-      }
+      this.buildPlayCTA();
     },
 
     bindPlayCTAActions: function() {
       vids.$playVideoCTAButtonContainer.find("a").on("click", function(e) {
         e.preventDefault();
-        vids.$heroVideo[0].load();
-        vids.$playVideoCTAContainer.fadeOut("slow", function() {
-          vids.$heroVideo.fadeIn("slow", function() {
-            vids.$heroVideo[0].play();
-          });
+        vids.$heroVideoModal.foundation('reveal', 'open', {
+          animation: 'fade',
         });
       });
     },
@@ -62,22 +52,16 @@ $(function() {
       $("<a></a>", {
           "class": "button round",
           html: "Play Video"
+          // "data-reveal-id": "hero-video-modal"
         }).appendTo(vids.$playVideoCTAButtonContainer);
-      vids.$playVideoCTAButtonContainer.fadeIn();
-      this.bindPlayCTAActions();
-    },
-
-    doEndVideo: function() {
-      vids.$heroVideo.bind("timeupdate", function() {
-        if(vids.$heroVideo[0].currentTime >= 106) {
-          vids.$heroVideo.fadeOut("slow", function() {
-            vids.$playVideoCTAContainer.fadeIn("slow");
-          });
-        }
-      })
+      vids.$playVideoCTAButtonContainer.fadeIn('fast');
+      playYTVideoCTA.bindPlayCTAActions();
     },
 
   }
+
+
+
 
 
 
@@ -188,6 +172,7 @@ $(function() {
   }
 
 
+
   //
   // Do the stuff
   //
@@ -195,8 +180,41 @@ $(function() {
     RateCalc.init();
   }
   if($("#detail-video")) {
-    HeroVideo.init();
+    playYTVideoCTA.init();
   }
 
 });
+
+
+
+
+
+
+// debouncing function from John Hann
+// http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+(function($,sr){
+  var debounce = function (func, threshold, execAsap) {
+    var timeout;
+    return function debounced() {
+      var obj = this, args = arguments;
+      function delayed() {
+        if (!execAsap) {
+          func.apply(obj, args);
+          timeout = null;
+        }
+      };
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+      else if (execAsap) {
+        func.apply(obj, args);
+      }
+      timeout = setTimeout(delayed, threshold || 20);
+    };
+  }
+  // smartresize 
+  jQuery.fn[sr] = function(fn){ return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+})(jQuery,'smartresize');
+
 
