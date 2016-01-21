@@ -13,7 +13,9 @@
 }
 
 $icon-font: 'concordis-glyphs';
-$icon-logo: '\e600';
+$icon-logo-concordis-by-003: '\e601';
+$icon-logo-concordis-training: '\e600';
+$icon-logo-concordis-select: '\e602';
 $icon-twitter: '\ea92';
 $icon-facebook: '\ea8d';
 $icon-linkedin: '\eac8';
@@ -50,6 +52,8 @@ li.name h1 { text-align: left; color: #fff; }
 
 .icon-phone,
 .icon-email,
+.icon-logo-concordis-select,
+.icon-logo-concordis-training,
 li.name h1,
 li.social a {
   & span { position: absolute; top: -9999px; left: -9999px; }
@@ -57,11 +61,25 @@ li.social a {
 }
 // .icon-phone:before { margin-right: 4px; content: $icon-phone; }
 // .icon-email:before { margin-right: 4px; content: $icon-email; }
-li.name h1:before { margin-left: 10px; font-size: rem-calc(36); line-height: 45px; content: $icon-logo; }
+li.name h1:before { margin-left: 10px; font-size: rem-calc(36); line-height: 45px; content: $icon-logo-concordis-by-003; }
 li.linkedin a:before { content: $icon-linkedin; }
 li.twitter a:before { content: $icon-twitter; }
 li.facebook a:before { content: $icon-facebook; }
 li.soundcloud a:before { content: $icon-soundcloud; }
+
+.icon-logo-concordis-select {
+  &:before {
+    font-size: rem-calc(60);
+    content: $icon-logo-concordis-select;
+  }
+}
+
+.icon-logo-concordis-training {
+  &:before {
+    font-size: rem-calc(60);
+    content: $icon-logo-concordis-training;
+  }
+}
 
 p.lead {
   line-height: rem-calc(45);
@@ -375,9 +393,46 @@ section#detail-service-offering {
   }
 }
 
+section#detail-concordis-select {
+  color: #fff;
+  color: rgba(255,255,255,0.8);
+  background-color: darken($body-bg, 8);
+  h1 {
+    color: #fff;
+    opacity: 0.9;
+  }
+  h2 {
+    margin-top: rem-calc(36);
+    margin-bottom: rem-calc(48);
+    line-height: 1;
+    font-size: rem-calc(24);
+    color: #fff;
+    opacity: 0.6;
+  }
+  .button {
+    margin-top: rem-calc(36);
+    margin-bottom: 0;
+  }
+  ul {
+    margin: 1rem 0 2rem 0;
+    list-style: none;
+    li {
+      padding: 0;
+      &:after {
+        @extend %icon;
+        display: block;
+        font-size: rem-calc(24);
+        // color: $success-color;
+        content: $icon-checkmark;
+        text-align: center;
+      }
+    }
+  }
+}
+
 section#detail-training {
-  border-top: 1rem solid $body-bg;
-  border-bottom: 1rem solid $body-bg;
+  // border-top: 1rem solid $body-bg;
+  // border-bottom: 1rem solid $body-bg;
   color: #fff;
   color: rgba(255,255,255,0.8);
   background-color: $primary-color;
@@ -386,6 +441,7 @@ section#detail-training {
     opacity: 0.9;
   }
   h2 {
+    margin-top: rem-calc(36);
     margin-bottom: rem-calc(48);
     line-height: 1;
     font-size: rem-calc(24);
@@ -393,6 +449,8 @@ section#detail-training {
     opacity: 0.6;
   }
   .button {
+    margin-top: rem-calc(36);
+    margin-bottom: 0;
     background-color: $success-color;
   }
 }
@@ -716,6 +774,15 @@ footer {
           margin-top: -0.3rem;
           display: block;
         }
+      }
+    }
+  }
+  section#detail-training,
+  section#detail-concordis-select {
+    .icon-logo-concordis-training,
+    .icon-logo-concordis-select, {
+      &:before {
+        font-size: rem-calc(45);
       }
     }
   }
