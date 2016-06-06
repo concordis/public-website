@@ -561,28 +561,33 @@ section#rate-calc-detail {
     background-color: #efeeed;
     border: 1px solid rgba(0,0,0,0.2);
     border-radius: $global-radius;
-    #contract-source-switch {
-      .secondary {
-        background-color: #ccc;
-      }
-      &.stack.button-group > li {
-        .button {
-          border: none;
-        }
-        &:first-child::after {
-          content: "— or —";
-          font-style: italic;
-          display: block;
-          padding: 0.25em;
-          line-height: 1;
-          text-align: center;
-        }
-      }
+    h4 {
+      text-align: center;
+      font-size: 1rem;
     }
+    // Not currently used since we have commented this switch in the UI.
+    // #contract-source-switch {
+    //   .secondary {
+    //     background-color: #ccc;
+    //   }
+    //   &.stack.button-group > li {
+    //     .button {
+    //       border: none;
+    //     }
+    //     &:first-child::after {
+    //       content: "— or —";
+    //       font-style: italic;
+    //       display: block;
+    //       padding: 0.25em;
+    //       line-height: 1;
+    //       text-align: center;
+    //     }
+    //   }
+    // }
     #breakdown-container {
       transition: opacity 0.5s ease;
       &.faded {
-        opacity: 0.2;
+        opacity: 0.1;
       }
     }
     i {
