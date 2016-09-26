@@ -139,7 +139,7 @@ $(function() {
     },
 
     c1MegaCalc: function() {
-      var c1InsuranceBenefitsCalc = 5.39;
+      var c1InsuranceBenefitsCalc = 5.90;
       var c1ConcordisRate = s.cSource ? s.cSourceConcordis : s.cSourceConsultant;
       var c1ConcordisRateCalc = (s.$c1BillRate.val() * c1ConcordisRate).toFixed(2);
       var c1ConcordisRateCalc2 = (s.$c1BillRate.val() * s.cSourceConsultant).toFixed(2);
